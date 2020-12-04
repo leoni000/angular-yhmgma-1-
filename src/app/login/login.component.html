@@ -1,0 +1,32 @@
+<title-head></title-head>
+
+<div class="image" >
+
+  <div class= "form-box">
+    <div class= "button-box">
+      <div id="btn" ></div>
+      <button type="button" class="toggle-btn"  (click)="login()">Log In</button>
+      <button type="button" class="toggle-btn"  (click)="register()">Register</button>
+    </div>
+  
+  <form id="login" class="input-group" *ngIf = "lginflag" >
+    <input type="text" class="input-field" name="uid" placeholder="User Id" required />
+    <input type="password" class="input-field" name="upwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"   placeholder="Enter Password" required>
+    <button type="submit" name="ulogin" class="submit-btn">Log In</button>
+  </form>
+  
+  
+  <form id="register" class="input-group" *ngIf = "regflag">
+    <input type="text" class="input-field" name="nuid" placeholder="Enter User Id" required />
+    <input type="password" class="input-field" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" name="nupwd"  placeholder="Enter New Password" required>
+    <input type="password" class="input-field" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" name="nupwd1"  placeholder="Re-enter Password" required>
+    <input type="email" class="input-field" name="nuemail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter Email Id">
+    <input type="text" class="input-field" name="nuphone" placeholder="Enter Mobile number (Don't suffix 0/+91)" required />
+    <button type="submit" name="nureg" class="submit-btn">Register</button>
+  </form>
+  
+
+  </div>
+</div>
+
+
